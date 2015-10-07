@@ -1,11 +1,43 @@
+#! /usr/bin/python
+
 import urllib
 import urllib2
 import json
 import os
 import sys
+import argparse
 
-url = sys.argv[1]
-type = sys.argv[2]
+parser = argparse.ArgumentParser(description="Shorten URL using the following services: bit.ly, j.mp, t.cn, is,gd, v.gd, tiny.cc.")
+parser.add_argument("url",
+    help="Enter the URL to shorten here")
+parser.add_argument("-j", "--jmp",
+    help="use j.mp to shorten url", action="store_true")
+parser.add_argument("-t", "--tcn",
+    help="use t.cn to shorten url", action="store_true")
+parser.add_argument("-i", "--isgd",
+    help="use is.gd to shorten url", action="store_true")
+parser.add_argument("-v", "--vgd",
+    help="use v.gd to shorten url", action="store_true")
+parser.add_argument("-c", "--tinycc",
+    help="use tiny.cc to shorten url", action="store_true")
+
+parser.add_argument("-V", "--version", action='version', version='%(prog)s 1.0')
+args = parser.parse_args()
+
+url = args.url
+
+if args.jmp:
+    type = 'j.mp'
+elif args.tcn:
+    type = 't.cn'
+elif args.isgd:
+    type = 'is.gd'
+elif args.vgd:
+    type = 'v.gd'
+elif args.tinycc:
+    type = 'tiny.cc'
+else :
+    type = "bit.ly"
 
 api = {
 	'bitly' : 'https://api-ssl.bitly.com/v3/shorten?format=json&login=hzlzh&apiKey=R_e8bcc43adaa5f818cc5d8a544a17d27d&longUrl=',
