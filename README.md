@@ -54,3 +54,12 @@ $ shortn --help
         -v, --vgd      use v.gd to shorten url
         -c, --tinycc   use tiny.cc to shorten url
         -V, --version  show program's version number and exit
+        
+## Supported Services
+
+* bit.ly
+* j.mp
+* t.cn
+* is.gd
+* v.gd
+* tiny.cc
