@@ -40,7 +40,7 @@ $ shortn --help
 
       Usage: shortn [-h] [-j] [-t] [-i] [-v] [-c] [-V] url
        
-      Shorten URL using the following services: bit.ly, j.mp, t.cn, is,gd, v.gd,
+      Shorten URL using the following services: bit.ly, j.mp, t.cn, is.gd, v.gd,
       tiny.cc.
        
       positional arguments:

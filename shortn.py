@@ -7,7 +7,7 @@ import os
 import sys
 import argparse
 
-parser = argparse.ArgumentParser(description="Shorten URL using the following services: bit.ly, j.mp, t.cn, is,gd, v.gd, tiny.cc.")
+parser = argparse.ArgumentParser(description="Shorten URL using the following services: bit.ly, j.mp, t.cn, is.gd, v.gd, tiny.cc.")
 parser.add_argument("url",
     help="Enter the URL to shorten here")
 parser.add_argument("-j", "--jmp",
