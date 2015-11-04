@@ -3,8 +3,6 @@
 import urllib
 import urllib2
 import json
-import os
-import sys
 import argparse
 
 parser = argparse.ArgumentParser(description="Shorten URL using the following services: bit.ly, j.mp, t.cn, is.gd, v.gd, tiny.cc.")
