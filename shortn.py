@@ -24,19 +24,6 @@ args = parser.parse_args()
 
 url = args.url
 
-if args.jmp:
-    type = 'j.mp'
-elif args.tcn:
-    type = 't.cn'
-elif args.isgd:
-    type = 'is.gd'
-elif args.vgd:
-    type = 'v.gd'
-elif args.tinycc:
-    type = 'tiny.cc'
-else :
-    type = "bit.ly"
-
 api = {
 	'bitly' : 'https://api-ssl.bitly.com/v3/shorten?format=json&login=hzlzh&apiKey=R_e8bcc43adaa5f818cc5d8a544a17d27d&longUrl=',
 	'jmp' : 'http://api.j.mp/v3//shorten?format=json&login=hzlzh&apiKey=R_e8bcc43adaa5f818cc5d8a544a17d27d&longUrl=',
@@ -55,24 +42,24 @@ def getLink(service,url):
 if (('http' in url) == False):
     url = 'http://'+url
 
-if type == 'bit.ly':
-    service = api['bitly']
-    output = json.loads(getLink(service,url))["data"]["url"]
-elif type == 'j.mp':
+if args.jmp:
     service = api['jmp']
     output = json.loads(getLink(service,url))["data"]["url"]
-elif type == 't.cn':
+elif args.tcn:
     service = api['tcn']
     output = json.loads(getLink(service,url))["urls"][0]["url_short"]
-elif type == 'is.gd':
+elif args.isgd:
     service = api['isgd']
     output = json.loads(getLink(service,url))["shorturl"]
-elif type == 'v.gd':
+elif args.vgd:
     service = api['vgd']
     output = json.loads(getLink(service,url))["shorturl"]
-elif type == 'tiny.cc':
+elif args.tinycc:
     service = api['tinycc']
     output = json.loads(getLink(service,url))["results"]["short_url"]
+else:
+    service = api['bitly']
+    output = json.loads(getLink(service,url))["data"]["url"]
 
 if (output != ''):
     print output
