@@ -12,7 +12,7 @@ setup(name='shortn',
       py_modules=['shortn'],
       entry_points = {
         'console_scripts': [
-            'shortn = shortn'
+            'shortn = shortn:main'
         ],
       }
 )
