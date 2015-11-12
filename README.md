@@ -10,7 +10,7 @@ A command line application written in python that lets you shorten url using bit
 ### Method 1 - Using pip
 
 ```bash
-pip install --upgrade https://github.com/ishu3101/shortn/tarball/master
+pip install shortn
 ```
 
 ### Method 2 - Build from source
