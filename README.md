@@ -2,6 +2,9 @@
 
 A command line application written in python that lets you shorten url using bit.ly, j.mp, tiny.cc and more
 
+[![Pip version][shield-pip]][info-pip]
+[![MIT licensed][shield-license]][info-license]
+
 ## Install
 
 ### Method 1 - Using pip
@@ -63,3 +66,8 @@ $ shortn --help
 * is.gd
 * v.gd
 * tiny.cc
+
+[info-license]: LICENSE
+[info-pip]: https://pypi.python.org/pypi/shortn
+[shield-license]: https://img.shields.io/pypi/l/shortn.svg
+[shield-pip]: https://img.shields.io/pypi/v/shortn.svg
