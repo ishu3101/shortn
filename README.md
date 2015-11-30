@@ -5,6 +5,13 @@ A command line application written in python that lets you shorten url using bit
 [![Pip version][shield-pip]][info-pip]
 [![MIT licensed][shield-license]][info-license]
 
+## Table of Contents
+
+* [Install](#install)
+* [Usage](#usage)
+* [Supported Services](#supported-services)
+* [License](#license)
+
 ## Install
 
 ### Method 1 - Using pip
