@@ -66,6 +66,10 @@ $ shortn --help
 * is.gd
 * v.gd
 * tiny.cc
+ 
+## License
+
+shortn is released under the MIT license. See [LICENSE](LICENSE) for details.
 
 [info-license]: LICENSE
 [info-pip]: https://pypi.python.org/pypi/shortn
